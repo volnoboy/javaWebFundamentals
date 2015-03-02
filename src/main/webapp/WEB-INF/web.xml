@@ -6,13 +6,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
     http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-    <!--<servlet>-->
-        <!--<servlet-name>Our</servlet-name>-->
-        <!--<servlet-class>com.volnoboy.OurServlet</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>Our</servlet-name>-->
-        <!--<url-pattern>/home</url-pattern>-->
-    <!--</servlet-mapping>-->
+    <context-param>
+        <param-name>ProductName</param-name>
+        <param-value>Servlet context product name</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>SimpleServlet</servlet-name>
+        <servlet-class>com.volnoboy.SimpleServlet</servlet-class>
+        <init-param>
+            <param-name>ProductName</param-name>
+            <param-value>Yet another Product name</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SimpleServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
   <display-name>Archetype Created Web Application</display-name>
 </web-app>
