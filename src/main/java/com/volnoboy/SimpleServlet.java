@@ -2,6 +2,7 @@ package com.volnoboy;
 
 import java.io.IOException;
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +23,7 @@ public class SimpleServlet extends HttpServlet {
 	}
 
 	@Override
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String name  = request.getParameter("name");
 		if (name != null) {
 			response.setContentType("text/xml");
@@ -32,7 +33,7 @@ public class SimpleServlet extends HttpServlet {
 					"<product>%s</product>" +
 					"</application>", name, appName);
 		} else {
-			response.getWriter().write("Please enter name value!");
+			throw new ServletException("A name shoul be entered");
 		}
 	}
 

@@ -22,5 +22,8 @@
         <servlet-name>SimpleServlet</servlet-name>
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
+    <error-page>
+        <location>/error.jsp</location>
+    </error-page>
   <display-name>Archetype Created Web Application</display-name>
 </web-app>
