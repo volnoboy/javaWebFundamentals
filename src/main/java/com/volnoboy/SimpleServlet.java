@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
 * Created by Reuven on 2/28/15.
 */
-@WebServlet(urlPatterns = {"/home", "*.do"}, name="SimpleServlet", initParams = {@WebInitParam(name = "ProductName", value = "Welcome Application")})
+@WebServlet(urlPatterns = {"/home"}, name="SimpleServlet", initParams = {@WebInitParam(name = "ProductName", value = "Welcome Application")})
 public class SimpleServlet extends HttpServlet {
 	String appName = "My application";
 

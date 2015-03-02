@@ -1,8 +1,14 @@
+<%@ page import="com.volnoboy.User" %>
 <html>
 
 <body>
 <%@include file="header.jsp"%>
-<h2>Hello World!!!</h2>
+<% User user  =(User)request.getAttribute("user");
+    if (user == null) {
+        user = new User();
+    }
+    %>
+<h2>Welcome <%= user.getName() %></h2>
 <form action="home" method="post">
     <p>
         Name: <input type="text" name="name">
