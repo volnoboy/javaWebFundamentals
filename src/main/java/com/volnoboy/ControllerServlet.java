@@ -16,7 +16,11 @@ public class ControllerServlet extends HttpServlet {
 
 	public void init() {
 		ApplicationSettings applicationSettings = new ApplicationSettings();
-		applicationSettings.setFormCssClass("blueUser");
+		CssClass cssClass = new CssClass();
+		cssClass.setName("blueUser");
+		String[] tabNames = {"SignIn", "Home", "Profile", "Settings"};
+		applicationSettings.setFormCssClass(cssClass);
+		applicationSettings.setTabNames(tabNames);
 		getServletContext().setAttribute("app", applicationSettings);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
