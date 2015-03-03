@@ -22,7 +22,7 @@ public class ControllerServlet extends HttpServlet {
 		user.setName("Valera");
 		user.setEmail("valera@mozgov.net");
 
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
 		request.setAttribute("user", user);
 		dispatcher.forward(request, response);
 	}

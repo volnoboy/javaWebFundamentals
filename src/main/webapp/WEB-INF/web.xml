@@ -31,7 +31,7 @@
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
     <error-page>
-        <location>/error.jsp</location>
+        <location>/WEB-INF/error.jsp</location>
     </error-page>
   <display-name>Archetype Created Web Application</display-name>
 </web-app>
