@@ -1,6 +1,8 @@
 package com.volnoboy;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,7 +20,14 @@ public class ControllerServlet extends HttpServlet {
 		ApplicationSettings applicationSettings = new ApplicationSettings();
 		CssClass cssClass = new CssClass();
 		cssClass.setName("blueUser");
+		List<Tab> tabs = new ArrayList<>();
+		tabs.add(new Tab("SignIn", "#signin"));
+		tabs.add(new Tab("home", "#home"));
+		tabs.add(new Tab("Profile", "#profile"));
+		tabs.add(new Tab("Messages", "#messages"));
+		tabs.add(new Tab("Settings", "#settings"));
 		String[] tabNames = {"SignIn", "Home", "Profile", "Settings"};
+		applicationSettings.setTabs(tabs);
 		applicationSettings.setFormCssClass(cssClass);
 		applicationSettings.setTabNames(tabNames);
 		getServletContext().setAttribute("app", applicationSettings);

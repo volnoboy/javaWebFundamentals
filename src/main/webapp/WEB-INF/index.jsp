@@ -23,10 +23,9 @@
     <h2>${3!=2}</h2>
 
     <ul class="nav nav-tabs">
-        <li><a href="#">${app.tabNames[0]}</a></li>
-        <li><a href="#">${app.tabNames[1]}</a></li>
-        <li><a href="#">${app.tabNames[2]}</a></li>
-        <li><a href="#">${app.tabNames[3]}</a></li>
+        <c:forEach items="${app.tabs}" var="tab">
+            <li><a href="${tab.url}">${tab.name}</a></li>
+        </c:forEach>
     </ul>
 <form action="home" method="post">
     <p>
