@@ -13,6 +13,12 @@ import javax.servlet.http.HttpServletResponse;
  * @since 3/2/15 7:57 PM
  */
 public class ControllerServlet extends HttpServlet {
+
+	public void init() {
+		ApplicationSettings applicationSettings = new ApplicationSettings();
+		applicationSettings.setFormCssClass("blueUser");
+		getServletContext().setAttribute("app", applicationSettings);
+	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 	}
