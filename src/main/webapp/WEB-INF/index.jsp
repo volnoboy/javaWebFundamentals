@@ -5,6 +5,8 @@
 <%@include file="header.jsp"%>
 <div class="${app["formCssClass"]["name"]}">
 <h2>Welcome ${user.name}</h2>
+    <h2>${3+2}</h2>
+    <h2>${3!=2}</h2>
 
     <ul class="nav nav-tabs">
         <li><a href="#">${app.tabNames[0]}</a></li>
