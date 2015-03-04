@@ -1,8 +1,8 @@
-
 <html>
-
 <body>
 <%@include file="header.jsp"%>
+<c:import url="header.jsp" var="zelexon"/>
+${zelexon}
 <div class="${app["formCssClass"]["name"]}">
     <c:if test="${!empty user.name}">
         <h2>Welcome ${user.name}</h2>
