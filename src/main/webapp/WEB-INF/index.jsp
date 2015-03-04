@@ -21,7 +21,10 @@ ${zelexon}
     <c:out value="Hello Everybody"/>
     <h2>${3+2}</h2>
     <h2>${3!=2}</h2>
-
+    <st:helloworld name="${user.name}"/>
+    <c:if test="${!empty user.name}">
+    <st:profile user="${user}"/>
+    </c:if>
     <ul class="nav nav-tabs">
         <c:forEach items="${app.tabs}" var="tab">
             <li><a href="${tab.url}">${tab.name}</a></li>
