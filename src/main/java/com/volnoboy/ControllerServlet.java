@@ -40,6 +40,11 @@ public class ControllerServlet extends HttpServlet {
 		User user  = new User();
 		user.setName("Valera");
 		user.setEmail("valera@mozgov.net");
+		user.setAvatarUrl("images/valera.jpg");
+		List<Todo> todos = new ArrayList<>();
+		todos.add(new Todo("Finish Cource", 1));
+		todos.add(new Todo("Go for a run", 3));
+		user.setTodos(todos);
 
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
 		request.setAttribute("user", user);

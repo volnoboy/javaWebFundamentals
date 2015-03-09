@@ -25,6 +25,23 @@ ${zelexon}
     <c:if test="${!empty user.name}">
     <st:profile user="${user}"/>
     </c:if>
+    
+    <st:priority user="${user}">
+        <jsp:attribute name="normalPriority">
+            <li class="normalPriority">
+                <span>${description}</span>
+                <span>${priority}</span>
+            </li>
+        </jsp:attribute>
+        <jsp:attribute name="highPriority">
+             <li class="highPriority">
+                 <span>${description}</span>
+                 <span>${priority}</span>
+             </li>
+        </jsp:attribute>
+    </st:priority>
+    
+    
     <ul class="nav nav-tabs">
         <c:forEach items="${app.tabs}" var="tab">
             <li><a href="${tab.url}">${tab.name}</a></li>
