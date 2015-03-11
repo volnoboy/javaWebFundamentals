@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://volnoboy.com/simple" prefix="m"%>
 <%@ taglib prefix="st" tagdir="/WEB-INF/tags" %>
 <head>
     <!-- Latest compiled and minified CSS -->

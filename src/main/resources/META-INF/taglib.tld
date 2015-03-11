@@ -1,0 +1,25 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <short-name>simple-tags</short-name>
+    <uri>http://volnoboy.com/simple</uri>
+    <jsp-version>2.2</jsp-version>
+
+    <!--<tag-file>-->
+        <!--<name>helloworld</name>-->
+        <!--<path>/META-INF/tags/helloworld.tag</path>-->
+    <!--</tag-file>-->
+    <tag>
+        <name>SimpleTag</name>
+        <tag-class>com.volnoboy.SimpleTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+    <tag>
+        <name>RepeatTag</name>
+        <tag-class>com.volnoboy.RepeatTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>repeat</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+</taglib>

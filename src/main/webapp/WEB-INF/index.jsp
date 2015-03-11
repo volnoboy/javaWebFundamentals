@@ -22,6 +22,10 @@ ${zelexon}
     <h2>${3+2}</h2>
     <h2>${3!=2}</h2>
     <st:helloworld name="${user.name}"/>
+
+    <m:RepeatTag repeat="5">
+        <m:SimpleTag></m:SimpleTag><br/>
+    </m:RepeatTag>
     <c:if test="${!empty user.name}">
     <st:profile user="${user}"/>
     </c:if>
